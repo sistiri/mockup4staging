@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Staging Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+    <!-- Feather icons CDN for scalable vector icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header Section -->
+    <header class="bg-white shadow-md p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold flex items-center">
+            <i data-feather="clipboard" class="w-6 h-6 mr-2 text-blue-500"></i>
+            Projects
+        </h1>
+        <nav class="hidden md:flex space-x-4">
+            <a href="index.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
+            </a>
+            <a href="projects.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+            </a>
+            <a href="tasks.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+            </a>
+            <a href="tradies.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
+            </a>
+            <a href="shopping-list.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="shopping-cart" class="w-5 h-5 mr-1 text-blue-500"></i>Shopping Lists
+            </a>
+            <a href="profile.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>Profile
+            </a>
+        </nav>
+        <button id="menu-toggle" class="md:hidden text-gray-600 hover:text-blue-500 focus:outline-none">
+            <i data-feather="menu" class="w-6 h-6 text-blue-500"></i>
+        </button>
+    </header>
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden bg-white shadow-md p-4">
+        <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="grid" class="w-5 h-5 mr-1"></i>Dashboard
+        </a>
+        <a href="projects.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="briefcase" class="w-5 h-5 mr-1"></i>Projects
+        </a>
+        <a href="tasks.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="clipboard" class="w-5 h-5 mr-1"></i>Tasks
+        </a>
+        <a href="tradies.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="tool" class="w-5 h-5 mr-1"></i>Tradies
+        </a>
+        <a href="shopping-list.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="shopping-cart" class="w-5 h-5 mr-1"></i>Shopping Lists
+        </a>
+        <a href="profile.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="user" class="w-5 h-5 mr-1"></i>Profile
+        </a>
+    </nav>
+
+<!-- Main Content Section -->
+<main class="p-2 sm:p-4 bg-gray-100">
+
+<!-- Project Form -->
+<h2 class="text-2xl font-semibold mb-4">Project Form</h2>
+<form class="space-y-4">
+    <!-- Project Title -->
+    <div>
+        <label for="projectTitle" class="block text-gray-700 font-medium mb-1">Project Title</label>
+        <input type="text" id="projectTitle" name="projectTitle" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter project title">
+    </div>
+    
+    <!-- Client Data Card -->
+    <div class="bg-gray-100 p-4 rounded-md shadow-md space-y-4">
+        <h3 class="text-lg font-semibold mb-2">Client Data</h3>
+        <input type="text" id="clientName" name="clientName" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Client Name">
+        <input type="text" id="clientMobile" name="clientMobile" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Mobile Number">
+        <input type="email" id="clientEmail" name="clientEmail" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Email">
+    </div>
+    
+    <!-- Real Estate Data Card -->
+    <div class="bg-gray-100 p-4 rounded-md shadow-md space-y-4">
+        <h3 class="text-lg font-semibold mb-2">Real Estate Data</h3>
+        <input type="text" id="address" name="address" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Address">
+        <input type="text" id="size" name="size" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Size (sq ft)">
+        
+        <div class="flex space-x-4">
+            <input type="number" id="bathrooms" name="bathrooms" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Bathrooms">
+            <input type="number" id="bedrooms" name="bedrooms" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Bedrooms">
+        </div>
+        
+        <div class="flex space-x-4">
+            <label class="flex items-center space-x-2">
+                <input type="checkbox" id="balcony" name="balcony" class="form-checkbox text-blue-600">
+                <span class="text-gray-700">Balcony</span>
+            </label>
+            <label class="flex items-center space-x-2">
+                <input type="checkbox" id="laundry" name="laundry" class="form-checkbox text-blue-600">
+                <span class="text-gray-700">Laundry</span>
+            </label>
+            <label class="flex items-center space-x-2">
+                <input type="checkbox" id="foyer" name="foyer" class="form-checkbox text-blue-600">
+                <span class="text-gray-700">Foyer</span>
+            </label>
+        </div>
+    </div>
+    
+    <!-- Project Description -->
+    <div>
+        <label for="projectDescription" class="block text-gray-700 font-medium mb-1">Project Description</label>
+        <textarea id="projectDescription" name="projectDescription" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter project description"></textarea>
+    </div>
+
+    <!-- Project Photos Upload -->
+    <div class="flex items-center space-x-2">
+        <label class="block text-gray-700 font-medium mb-1">Upload Photos</label>
+        <button type="button" class="text-blue-500 hover:text-blue-700 focus:outline-none">
+            <i data-feather="camera" class="w-6 h-6"></i>
+        </button>
+    </div>
+    
+    <!-- Dates Section -->
+    <div class="flex flex-wrap space-x-4">
+        <!-- Start Date -->
+        <div class="flex-1 min-w-[calc(50%-8px)]">
+            <label for="startDate" class="block text-gray-700 font-medium mb-1">Start Date</label>
+            <input type="date" id="startDate" name="startDate" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        
+        <!-- Finish Date -->
+        <div class="flex-1 min-w-[calc(50%-8px)]">
+            <label for="finishDate" class="block text-gray-700 font-medium mb-1">Finish Date</label>
+            <input type="date" id="finishDate" name="finishDate" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+    </div>
+    
+    <!-- Budget -->
+    <div>
+        <label for="budget" class="block text-gray-700 font-medium mb-1">Budget</label>
+        <input type="number" id="budget" name="budget" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter budget">
+    </div>
+    
+    <!-- Save Button -->
+    <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        Save Project
+    </button>
+</form>
+
+
+    </main>
+</body>
+</html>
+
+<script src="common.js"></script>

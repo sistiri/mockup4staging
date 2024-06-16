@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create/Edit Task</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+    <!-- Feather icons CDN for scalable vector icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Header Section -->
+    <header class="bg-white shadow-md p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold flex items-center">
+            <i data-feather="clipboard" class="w-6 h-6 mr-2 text-blue-500"></i>
+            Create/Edit Task
+        </h1>
+        <nav class="hidden md:flex space-x-4">
+            <a href="index.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
+            </a>
+            <a href="projects.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+            </a>
+            <a href="tasks.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+            </a>
+            <a href="tradies.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
+            </a>
+            <a href="shopping-list.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="shopping-cart" class="w-5 h-5 mr-1 text-blue-500"></i>Shopping Lists
+            </a>
+            <a href="profile.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>Profile
+            </a>
+        </nav>
+        <button id="menu-toggle" class="md:hidden text-gray-600 hover:text-blue-500 focus:outline-none">
+            <i data-feather="menu" class="w-6 h-6 text-blue-500"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden bg-white shadow-md p-4">
+        <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
+        </a>
+        <a href="projects.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+        </a>
+        <a href="tasks.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+        </a>
+        <a href="tradies.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
+        </a>
+        <a href="shopping-list.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="shopping-cart" class="w-5 h-5 mr-1 text-blue-500"></i>Shopping Lists
+        </a>
+        <a href="profile.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>Profile
+        </a>
+    </nav>
+    
+    <!-- Main Content Section -->
+    <main class="p-2 bg-gray-100 min-h-screen">
+        <!-- Task Details Section -->
+        <section class="bg-white rounded-lg shadow-md p-2 mb-6">
+            <h2 class="text-2xl font-semibold mb-4">Task Details</h2>
+            
+            <!-- Task Title -->
+            <div class="mb-4">
+                <label for="taskTitle" class="block text-gray-700 font-medium mb-2">Task Title</label>
+                <input type="text" id="taskTitle" name="taskTitle" class="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" value="Task Title Example">
+            </div>
+            
+            <!-- Task Description -->
+            <div class="mb-4">
+                <label for="taskDescription" class="block text-gray-700 font-medium mb-2">Task Description</label>
+                <textarea id="taskDescription" name="taskDescription" rows="4" class="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500">This is an example task description. It provides detailed information about the task.</textarea>
+            </div>
+            
+            <!-- Project Selector -->
+            <div class="mb-4">
+                <label for="projectSelector" class="block text-gray-700 font-medium mb-2">Project</label>
+                <select id="projectSelector" name="projectSelector" class="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option>Project 1</option>
+                    <option>Project 2</option>
+                    <option>Project 3</option>
+                </select>
+            </div>
+            
+            <!-- Deadline -->
+            <div class="mb-4">
+                <label for="deadline" class="block text-gray-700 font-medium mb-2">Deadline</label>
+                <input type="date" id="deadline" name="deadline" class="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" value="2024-06-30">
+            </div>
+            
+            <!-- Responsible -->
+            <div class="mb-4">
+                <label for="responsible" class="block text-gray-700 font-medium mb-2">Responsible</label>
+                <select id="responsible" name="responsible" class="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option>John Doe</option>
+                    <option>Jane Smith</option>
+                    <option>Mark Johnson</option>
+                </select>
+            </div>
+            
+            <!-- Tradie Selector -->
+            <div class="mb-4">
+                <label for="tradieSelector" class="block text-gray-700 font-medium mb-2">Tradie</label>
+                <select id="tradieSelector" name="tradieSelector" class="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option>Tradie 1</option>
+                    <option>Tradie 2</option>
+                    <option>Tradie 3</option>
+                </select>
+            </div>
+    
+            <!-- Save Button -->
+            <div class="flex justify-end">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" onclick="window.location.href='task-details.html'">
+                    Save Changes
+                </button>
+            </div>
+
+        </section>
+    
+        <!-- Notes Section -->
+        <section class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-2xl font-semibold mb-4">Notes</h2>
+            
+            <div class="divide-y divide-gray-200">
+                <!-- Note Example -->
+                <div class="py-2 flex justify-between items-start">
+                    <p class="text-gray-700">This is an example note added for this task. It provides additional information.</p>
+                    <span class="text-sm text-gray-500">2024-06-14</span>
+                </div>
+                <!-- Add more notes as needed -->
+            </div>
+            
+            <!-- Add Note Button -->
+            <div class="flex justify-end mt-4">
+                <button class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">Add Note</button>
+            </div>
+        </section>
+    
+        <!-- Photos Section -->
+        <section class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-2xl font-semibold mb-4">Photos</h2>
+            
+            <div class="space-y-4">
+                <!-- Photo Example -->
+                <div class="relative">
+                    <img src="https://via.placeholder.com/600x400" alt="Photo 1" class="w-full rounded-md">
+                    <button class="absolute top-2 right-2 bg-red-500 text-white rounded-full p-1" aria-label="Delete Photo">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Add more photos as needed -->
+            </div>
+    
+            <!-- Add Photo Button -->
+            <div class="flex justify-end mt-4">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 mr-2" onclick="uploadPhoto()">Upload Photo</button>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 ml-2" onclick="useCamera()">Use Camera</button>
+            </div>
+        </section>
+    </main>
+    
+    
+</body>
+</html>
+<script src="common.js"></script>
+<script src="task-details.js"></script>
+
+
+<script>
+    // Placeholder functions for photo actions
+    function uploadPhoto() {
+        // Implement photo upload functionality
+        alert('Upload photo functionality to be implemented');
+    }
+
+    function useCamera() {
+        // Implement camera capture functionality
+        alert('Use camera functionality to be implemented');
+    }
+
+    // Feather icons initialization
+    feather.replace();
+</script>

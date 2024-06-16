@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Staging App - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+    <!-- Feather icons CDN for scalable vector icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Header Section -->
+    <header class="bg-white shadow-md p-2 flex justify-between items-center">
+        <h1 class="text-2xl font-bold flex items-center">
+            <i data-feather="clipboard" class="w-6 h-6 mr-2 text-blue-500"></i>
+            Dashboard
+        </h1>
+        <nav class="hidden md:flex space-x-4">
+            <a href="index.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
+            </a>
+            <a href="projects.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+            </a>
+            <a href="tasks.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+            </a>
+            <a href="tradies.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
+            </a>
+            <a href="shopping-list.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="shopping-cart" class="w-5 h-5 mr-1 text-blue-500"></i>Shopping Lists
+            </a>
+            <a href="profile.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>Profile
+            </a>
+        </nav>
+        <button id="menu-toggle" class="md:hidden text-gray-600 hover:text-blue-500 focus:outline-none">
+            <i data-feather="menu" class="w-6 h-6 text-blue-500"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden bg-white shadow-md p-4">
+        <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
+        </a>
+        <a href="projects.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+        </a>
+        <a href="tasks.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+        </a>
+        <a href="tradies.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
+        </a>
+        <a href="shopping-list.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="shopping-cart" class="w-5 h-5 mr-1 text-blue-500"></i>Shopping Lists
+        </a>
+        <a href="profile.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>Profile
+        </a>
+    </nav>
+    
+    <!-- Main Content Section -->
+    <main class="p-4">
+        <h2 class="text-2xl font-semibold">Welcome to Your Dashboard</h2>
+        <p class="mt-4 text-gray-700">Overview of your home staging projects and tasks.</p>
+    </main>
+</body>
+</html>
+
+<!-- JavaScript to toggle the mobile menu -->
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        var menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+
+    // Replace placeholder icons with Feather icons
+    feather.replace();
+</script>

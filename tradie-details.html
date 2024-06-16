@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradie Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+    <!-- Feather icons CDN for scalable vector icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold flex items-center">
+            <i data-feather="clipboard" class="w-6 h-6 mr-2 text-blue-500"></i>
+            Tradie details
+        </h1>
+        <nav class="hidden md:flex space-x-4">
+            <a href="index.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
+            </a>
+            <a href="projects.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+            </a>
+            <a href="tasks.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+            </a>
+            <a href="tradies.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
+            </a>
+            <a href="shopping-list.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="shopping-cart" class="w-5 h-5 mr-1 text-blue-500"></i>Shopping Lists
+            </a>
+            <a href="profile.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>Profile
+            </a>
+        </nav>
+        <button id="menu-toggle" class="md:hidden text-gray-600 hover:text-blue-500 focus:outline-none">
+            <i data-feather="menu" class="w-6 h-6 text-blue-500"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden bg-white shadow-md p-4">
+        <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
+        </a>
+        <a href="projects.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+        </a>
+        <a href="tasks.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+        </a>
+        <a href="tradies.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
+        </a>
+        <a href="shopping-list.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="shopping-cart" class="w-5 h-5 mr-1 text-blue-500"></i>Shopping Lists
+        </a>
+        <a href="profile.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>Profile
+        </a>
+    </nav>
+    
+    <!-- Main Content Section -->
+    <main class="p-4 bg-gray-100">
+
+    <!-- Contact Details Section -->
+    <div class="bg-white p-6 rounded-md shadow-md mb-6">
+        <div class="flex items-center">
+            <img src="https://via.placeholder.com/100" alt="Tradie Thumbnail" class="w-24 h-24 rounded-full object-cover mr-4">
+            <div>
+                <h1 class="text-2xl font-bold mb-2">John Doe</h1>
+                <p class="text-gray-600">Plumber</p>
+                <p class="text-gray-600">New York, NY</p>
+            </div>
+        </div>
+        <div class="mt-4 space-y-2">
+            <div class="flex items-center space-x-2">
+                <i data-feather="phone" class="text-blue-500 w-5 h-5"></i>
+                <a href="tel:1234567890" class="text-blue-500 hover:text-blue-700">123-456-7890</a>
+            </div>
+            <div class="flex items-center space-x-2">
+                <i data-feather="message-circle" class="text-green-500 w-5 h-5"></i>
+                <a href="sms:1234567890" class="text-green-500 hover:text-green-700">Send Text</a>
+            </div>
+            <div class="flex items-center space-x-2">
+                <i data-feather="mail" class="text-red-500 w-5 h-5"></i>
+                <a href="mailto:john.doe@example.com" class="text-red-500 hover:text-red-700">john.doe@example.com</a>
+            </div>
+        </div>
+    </div>
+    
+        <!-- Notes Section -->
+        <div class="bg-white p-6 rounded-md shadow-md mb-6">
+            <h2 class="text-xl font-bold mb-4">Notes</h2>
+            <div class="space-y-4">
+                <!-- Example Note -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel ullamcorper lorem.</p>
+                    <p class="text-gray-500 text-sm mt-2">- Added on 2024-06-14</p>
+                </div>
+                <!-- Add Note Button -->
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 flex items-center" onclick="toggleNotesPopup()">
+                    <i data-feather="plus" class="w-5 h-5 mr-2"></i>
+                    Add Note
+                </button>
+            </div>
+        </div>
+    
+        <!-- Related Projects Section -->
+        <div class="bg-white p-6 rounded-md shadow-md">
+            <h2 class="text-xl font-bold mb-4">Related Projects</h2>
+            <div class="space-y-4">
+                <!-- Example Project -->
+                <div class="border-l-4 border-blue-500 p-4 rounded-md bg-gray-50 shadow-sm">
+                    <h3 class="text-lg font-semibold mb-2">Project Title 1</h3>
+                    <p class="text-gray-600 mb-2">Job Description or Role</p>
+                    <p class="text-gray-500 text-sm mb-2">Start Date: 2024-05-01</p>
+                    <p class="text-gray-500 text-sm mb-2">End Date: 2024-05-15</p>
+                    <div class="flex space-x-2 mt-2">
+                        <button class="text-yellow-500 hover:text-yellow-700" aria-label="Notes">
+                            <i data-feather="file-text" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Add Job Button -->
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 flex items-center" onclick="toggleJobPopup()">
+                    <i data-feather="plus" class="w-5 h-5 mr-2"></i>
+                    Add Job
+                </button>
+            </div>
+        </div>
+    
+        <!-- Add Note Popup -->
+        <div id="notes-popup" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50">
+            <div class="bg-white p-6 rounded-md shadow-md w-full max-w-md">
+                <h2 class="text-xl font-bold mb-4">Add Note</h2>
+                <textarea class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4" rows="4" placeholder="Write your notes here..."></textarea>
+                <div class="flex justify-end">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" onclick="saveNotes()">Save</button>
+                    <button class="ml-2 text-gray-600 hover:text-gray-800" onclick="toggleNotesPopup()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Add Job Popup -->
+        <div id="job-popup" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50">
+            <div class="bg-white p-6 rounded-md shadow-md w-full max-w-md">
+                <h2 class="text-xl font-bold mb-4">Add Job</h2>
+                <input type="text" placeholder="Project Title" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4">
+                <input type="text" placeholder="Job Description or Role" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4">
+                <input type="date" placeholder="Start Date" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4">
+                <input type="date" placeholder="End Date" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4">
+                <div class="flex justify-end">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" onclick="saveJob()">Save</button>
+                    <button class="ml-2 text-gray-600 hover:text-gray-800" onclick="toggleJobPopup()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    
+    </main>
+    
+</body>
+</html>
+
+<script src="common.js"></script>
+<script src="tradie-details.js"></script>

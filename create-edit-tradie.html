@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Staging App - Create/Edit Tradie</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+    <!-- Feather icons CDN for scalable vector icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-white shadow-md p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold flex items-center">
+            <i data-feather="clipboard" class="w-6 h-6 mr-2 text-blue-500"></i>
+            Tasks
+        </h1>
+        <nav class="hidden md:flex space-x-4">
+            <a href="index.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
+            </a>
+            <a href="projects.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+            </a>
+            <a href="tasks.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+            </a>
+            <a href="tradies.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
+            </a>
+            <a href="shopping-list.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="shopping-cart" class="w-5 h-5 mr-1 text-blue-500"></i>Shopping Lists
+            </a>
+            <a href="profile.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>Profile
+            </a>
+        </nav>
+        <button id="menu-toggle" class="md:hidden text-gray-600 hover:text-blue-500 focus:outline-none">
+            <i data-feather="menu" class="w-6 h-6 text-blue-500"></i>
+        </button>
+    </header>
+    <main>
+        <h2>Tradie Form</h2>
+        <form>
+            <label for="tradieName">Tradie Name</label>
+            <input type="text" id="tradieName" name="tradieName">
+            <label for="contactInfo">Contact Information</label>
+            <input type="text" id="contactInfo" name="contactInfo">
+            <label for="skillsServices">Skills/Services</label>
+            <textarea id="skillsServices" name="skillsServices"></textarea>
+            <button type="submit">Save Tradie</button>
+        </form>
+    </main>
+</body>
+</html>

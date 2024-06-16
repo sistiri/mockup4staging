@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Staging App - Project Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+    <!-- <link rel="stylesheet" href="project-details.css"> -->
+    <!-- Feather icons CDN for scalable vector icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header Section -->
+    <header class="bg-white shadow-md p-2 flex justify-between items-center">
+        <h1 class="text-2xl font-bold flex items-center">
+            <i data-feather="clipboard" class="w-6 h-6 mr-2 text-blue-500"></i>
+            Project Details
+        </h1>
+        <nav class="hidden md:flex space-x-4">
+            <a href="index.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
+            </a>
+            <a href="projects.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+            </a>
+            <a href="tasks.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+            </a>
+            <a href="tradies.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
+            </a>
+            <a href="shopping-list.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="shopping-cart" class="w-5 h-5 mr-1 text-blue-500"></i>Shopping Lists
+            </a>
+            <a href="profile.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>Profile
+            </a>
+        </nav>
+        <button id="menu-toggle" class="md:hidden text-gray-600 hover:text-blue-500 focus:outline-none">
+            <i data-feather="menu" class="w-6 h-6 text-blue-500"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden bg-white shadow-md p-4">
+        <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
+        </a>
+        <a href="projects.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+        </a>
+        <a href="tasks.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+        </a>
+        <a href="tradies.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
+        </a>
+        <a href="shopping-list.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="shopping-cart" class="w-5 h-5 mr-1 text-blue-500"></i>Shopping Lists
+        </a>
+        <a href="profile.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>Profile
+        </a>
+    </nav>
+    
+    <!-- Main Content Section -->
+    <main class="container mx-auto p-4">
+         <!-- Project Details Header -->
+        <div class="flex justify-between items-center mb-6">
+            <div>
+                <h1 class="text-2xl font-semibold">Project Details</h1>
+                <p class="text-gray-600 mt-2">Project ID: #12345</p>
+            </div>
+            <div>
+                <button class="flex items-center bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" onclick="window.location.href='create-edit-project.html'">
+                    <i data-feather="edit-2" class="mr-2"></i>Edit Project
+                </button>
+            </div>
+        </div>
+    
+        <!-- Project Summary -->
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Project Summary</h2>
+            <p class="text-gray-600 mb-2">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus malesuada tincidunt.</p>
+            <div class="flex items-center mb-2">
+                <p class="text-gray-600">Status: <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md">In Progress</span></p>
+            </div>
+            <div class="flex items-center mb-2">
+                <p class="text-gray-600">Team Members: John Doe, Jane Smith, Alice Johnson</p>
+            </div>
+        </div>
+    
+        <!-- Tasks Section -->
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-4">Tasks</h2>
+            <!-- Task Item Example -->
+            <div class="task-item bg-white rounded-lg shadow-md p-4 mb-4">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="badge bg-blue-500 text-white px-2 py-1 rounded-full">#1</span>
+                    <h3 class="flex-grow text-lg font-semibold ml-2">Task Title</h3>
+                    <div class="relative">
+                        <button class="task-action-btn status-btn flex items-center space-x-1" aria-label="Status" onclick="toggleStatusDropdown(this)">
+                            <span class="badge bg-red-500 text-white px-2 py-1 rounded-full">Waiting</span>
+                            <i data-feather="chevron-down" class="w-4 h-4 ml-1 text-gray-500"></i>
+                        </button>
+                        <div class="status-dropdown hidden absolute right-0 mt-2 w-32 bg-white border border-gray-200 rounded-md shadow-lg z-50">
+                            <ul class="py-1">
+                                <li>
+                                    <button class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-yellow-100">
+                                        <span class="badge bg-yellow-500 text-white px-2 py-1 rounded-full">In Progress</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-green-100">
+                                        <span class="badge bg-green-500 text-white px-2 py-1 rounded-full">Done</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-2">This is a longer example description for the task to illustrate how it will look with more text. It should wrap properly and maintain a consistent layout.</p>
+                <p class="text-gray-500 mb-2">Project: <a href="project-details.html" class="text-blue-500 hover:text-blue-700 font-semibold">Project Title</a></p>
+                <div class="flex justify-end space-x-2">
+                    <a href="shopping-list.html" class="task-action-btn" aria-label="Shopping List">
+                        <i data-feather="shopping-cart" class="w-5 h-5 text-green-500"></i>
+                    </a>
+                    <a href="tradies.html" class="task-action-btn" aria-label="Tradies">
+                        <i data-feather="tool" class="w-5 h-5 text-purple-500"></i>
+                    </a>
+                    <a href="create-edit-task.html" class="task-action-btn" aria-label="Edit Task">
+                        <i data-feather="edit" class="w-5 h-5 text-gray-500"></i>
+                    </a>
+                    <a href="task-details.html" class="task-action-btn" aria-label="Task Details">
+                        <i data-feather="info" class="w-5 h-5 text-blue-500"></i>
+                    </a>
+                    <button class="task-action-btn" aria-label="Mark as Done" onclick="confirmCompletion(this)">
+                        <i data-feather="check-circle" class="w-5 h-5 text-red-500"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- End of Task Item Example -->
+        </div>
+    
+        <!-- Change Log Section -->
+        <section>
+            <h2 class="text-xl font-semibold mb-4">Change Log</h2>
+            <div class="divide-y divide-gray-200">
+                <div class="flex justify-between py-1">
+                    <p class="text-gray-500 flex-grow">No 37. task added by NickName1</p>
+                    <p class="text-sm text-gray-400">2024-06-15 10:30</p>
+                </div>
+                <div class="flex justify-between py-1">
+                    <p class="text-gray-500 flex-grow">No. 16 Task status changed by NickName2</p>
+                    <p class="text-sm text-gray-400">2024-06-14 15:45</p>
+                </div>
+                <div class="flex justify-between py-1">
+                    <p class="text-gray-500 flex-grow">Photo uploded by NickName3</p>
+                    <p class="text-sm text-gray-400">2024-06-13 11:20</p>
+                </div>
+                <!-- Repeat for each activity log entry -->
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>
+
+<script src="common.js"></script>

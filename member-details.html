@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="member-details.css"> -->
+    <!-- Feather icons CDN for scalable vector icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header Section -->
+    <header class="bg-white shadow-md p-2 flex justify-between items-center">
+        <h1 class="text-2xl font-bold flex items-center">
+            <i data-feather="clipboard" class="w-6 h-6 mr-2 text-blue-500"></i>
+            Member Details
+        </h1>
+        <nav class="hidden md:flex space-x-4">
+            <a href="index.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
+            </a>
+            <a href="projects.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+            </a>
+            <a href="tasks.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+            </a>
+            <a href="tradies.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
+            </a>
+            <a href="shopping-list.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="shopping-cart" class="w-5 h-5 mr-1 text-blue-500"></i>Shopping Lists
+            </a>
+            <a href="profile.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>Profile
+            </a>
+        </nav>
+        <button id="menu-toggle" class="md:hidden text-gray-600 hover:text-blue-500 focus:outline-none">
+            <i data-feather="menu" class="w-6 h-6 text-blue-500"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden bg-white shadow-md p-4">
+        <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
+        </a>
+        <a href="projects.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+        </a>
+        <a href="tasks.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+        </a>
+        <a href="tradies.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
+        </a>
+        <a href="shopping-list.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="shopping-cart" class="w-5 h-5 mr-1 text-blue-500"></i>Shopping Lists
+        </a>
+        <a href="profile.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>Profile
+        </a>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main class="container mx-auto p-4">
+        <!-- Member Details Section -->
+        <section class="mb-8">
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                    <img src="https://via.placeholder.com/150" alt="Profile Picture" class="w-20 h-20 rounded-full object-cover">
+                    <div class="ml-4">
+                        <h2 class="text-2xl font-semibold">John Doe</h2>
+                        <p class="text-gray-500">Nickname: Johnny</p>
+                        <p class="text-gray-500">Email: john.doe@example.com</p>
+                        <p class="text-gray-500">Mobile: +1234567890</p>
+                        <div class="flex mt-2">
+                            <a href="tel:+1234567890" class="text-blue-500 hover:text-blue-700 mr-4" aria-label="Call">
+                                <i data-feather="phone" class="w-5 h-5"></i>
+                            </a>
+                            <a href="sms:+1234567890" class="text-green-500 hover:text-green-700" aria-label="Message">
+                                <i data-feather="message-circle" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assigned Tasks Section -->
+        <section>
+        <!-- Task Item Example -->
+        <div class="task-item bg-white rounded-lg shadow-md p-4 mb-4 relative">
+            <!-- Top Row: Task Number, Task Title, and Status Dropdown -->
+            <div class="flex items-center justify-between mb-2">
+                <span class="badge bg-blue-500 text-white px-2 py-1 rounded-full">#1</span>
+                <h3 class="flex-grow text-lg font-semibold ml-2">Task Title</h3>
+                <div class="relative">
+                    <button class="task-action-btn status-btn flex items-center space-x-1" aria-label="Status" onclick="toggleStatusDropdown(this)">
+                        <span class="badge bg-red-500 text-white px-2 py-1 rounded-full">Waiting</span>
+                        <i data-feather="chevron-down" class="w-4 h-4 ml-1 text-gray-500"></i>
+                    </button>
+                    <div class="status-dropdown hidden absolute right-0 mt-2 w-32 bg-white border border-gray-200 rounded-md shadow-lg z-50">
+                        <ul class="py-1">
+                            <li>
+                                <button class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-yellow-100">
+                                    <span class="badge bg-yellow-500 text-white px-2 py-1 rounded-full">In Progress</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-green-100">
+                                    <span class="badge bg-green-500 text-white px-2 py-1 rounded-full">Done</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Task Description -->
+            <p class="text-gray-600 mb-1">This is a longer example description for the task to illustrate how it will look with more text. It should wrap properly and maintain a consistent layout.</p>
+            <div class="flex items-center justify-between">
+                <!-- Deadline -->
+                <p class="text-gray-500"><strong>Deadline:</strong> <span>2024-06-30</span></p>
+            <!-- Photos Badge -->
+            <button onclick="showPhotoPopup()" class="flex items-center bg-gray-200 text-gray-700 px-2 py-1 rounded-full" aria-label="View Photos">
+                <i data-feather="camera" class="w-4 h-4 mr-1"></i>
+                <span class="ml-1">3</span>
+            </button>
+
+            </div>
+            <!-- Project Title -->
+            <div class="flex items-center justify-between mb-3">
+                <p class="text-gray-500">Project: <a href="project-details.html" class="text-blue-500 hover:text-blue-700 font-semibold">Project Title</a></p>
+            </div>
+            <!-- Action Buttons and Trusted Member -->
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="https://via.placeholder.com/40" alt="Member Thumbnail" class="w-10 h-10 rounded-full object-cover">
+                    <a href="member-details.html" class="ml-2 text-blue-500 hover:text-blue-700 font-semibold">Nickname</a>
+                </div>
+                <div class="flex space-x-2">
+                    <a href="shopping-list.html" class="task-action-btn" aria-label="Shopping List">
+                        <i data-feather="shopping-cart" class="w-5 h-5 text-green-500"></i>
+                    </a>
+                    <a href="tradies.html" class="task-action-btn" aria-label="Tradies">
+                        <i data-feather="tool" class="w-5 h-5 text-purple-500"></i>
+                    </a>
+                    <a href="create-edit-task.html" class="task-action-btn" aria-label="Edit Task">
+                        <i data-feather="edit" class="w-5 h-5 text-gray-500"></i>
+                    </a>
+                    <a href="task-details.html" class="task-action-btn" aria-label="Task Details">
+                        <i data-feather="info" class="w-5 h-5 text-blue-500"></i>
+                    </a>
+                    <button class="task-action-btn" aria-label="Mark as Done" onclick="confirmCompletion(this)">
+                        <i data-feather="check-circle" class="w-5 h-5 text-red-500"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- Add more task items dynamically -->
+
+        <!-- Activity Log Section -->
+        <section>
+            <h2 class="text-xl font-semibold mb-4">Activity Log</h2>
+            <div class="divide-y divide-gray-200">
+                <div class="flex justify-between py-1">
+                    <p class="text-gray-500 flex-grow">Task created, Project 1</p>
+                    <p class="text-sm text-gray-400">2024-06-15 10:30</p>
+                </div>
+                <div class="flex justify-between py-1">
+                    <p class="text-gray-500 flex-grow">Photo added, Project 2</p>
+                    <p class="text-sm text-gray-400">2024-06-14 15:45</p>
+                </div>
+                <div class="flex justify-between py-1">
+                    <p class="text-gray-500 flex-grow">Called Tradie 1</p>
+                    <p class="text-sm text-gray-400">2024-06-13 11:20</p>
+                </div>
+                <!-- Repeat for each activity log entry -->
+            </div>
+        </section>
+
+        <!-- Photo Popup -->
+        <div id="photoPopup" class="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 flex items-center justify-center hidden">
+            <!-- Popup Content -->
+            <div class="bg-white rounded-lg p-4 shadow-md relative">
+                <!-- Close Button (X) -->
+                <button class="absolute top-2 right-2 text-gray-600 hover:text-gray-800" aria-label="Close" onclick="hidePhotoPopup()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M14.293 5.293a1 1 0 0 1 1.414 1.414L11.414 10l4.293 4.293a1 1 0 1 1-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 1 1-1.414-1.414L8.586 10 4.293 5.707a1 1 0 0 1 1.414-1.414L10 8.586l4.293-4.293z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <!-- Add New Photo Button with Options -->
+                <div class="flex justify-center mb-4">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-md mr-2 hover:bg-blue-600" onclick="uploadPhoto()">Upload Photo</button>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-md ml-2 hover:bg-blue-600" onclick="useCamera()">Use Camera</button>
+                </div>
+                <!-- Photo Gallery -->
+                <div class="space-y-4">
+                    <div class="relative">
+                        <button class="absolute top-1 right-1 text-gray-600 hover:text-red-600" aria-label="Delete Photo" onclick="confirmDelete(this)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M3 5a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v1H3V5zm2 3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8zm5-3V3a1 1 0 1 1 2 0v2a1 1 0 1 1-2 0z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <img src="https://via.placeholder.com/600x400" alt="Photo 1" class="w-full">
+                    </div>
+                    
+                    <!-- Additional Photos -->
+                    <!-- These will be dynamically added -->
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <!-- Your scripts -->
+    <script src="common.js"></script>
+    <script src="member-details.js"></script>
+    <!-- Include any external scripts if needed -->
+    <!-- Example: Feather Icons -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script> -->
+</body>
+
+</html>

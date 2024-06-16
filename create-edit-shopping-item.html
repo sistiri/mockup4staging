@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create/Edit Shopping Item</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tasks.css">
+    <!-- Feather icons CDN for scalable vector icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header Section -->
+    <header class="bg-white shadow-md p-2 flex justify-between items-center">
+        <h1 class="text-2xl font-bold flex items-center">
+            <i data-feather="clipboard" class="w-6 h-6 mr-2 text-blue-500"></i>
+            Create/Edit Shopping Item
+        </h1>
+        <nav class="hidden md:flex space-x-4">
+            <a href="index.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
+            </a>
+            <a href="projects.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+            </a>
+            <a href="tasks.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+            </a>
+            <a href="tradies.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
+            </a>
+            <a href="shopping-list.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="shopping-cart" class="w-5 h-5 mr-1 text-blue-500"></i>Shopping Lists
+            </a>
+            <a href="profile.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>Profile
+            </a>
+        </nav>
+        <button id="menu-toggle" class="md:hidden text-gray-600 hover:text-blue-500 focus:outline-none">
+            <i data-feather="menu" class="w-6 h-6 text-blue-500"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden bg-white shadow-md p-4">
+        <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
+        </a>
+        <a href="projects.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+        </a>
+        <a href="tasks.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+        </a>
+        <a href="tradies.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
+        </a>
+        <a href="shopping-list.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="shopping-cart" class="w-5 h-5 mr-1 text-blue-500"></i>Shopping Lists
+        </a>
+        <a href="profile.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>Profile
+        </a>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main class="p-2 sm:p-4 bg-gray-100">
+        <h1 class="text-2xl font-semibold mb-6">Shopping Item Details</h1>
+    
+        <!-- Shopping Item Form -->
+        <form>
+            <!-- Item Title -->
+            <div class="mb-4">
+                <label for="itemTitle" class="block text-gray-700 font-semibold mb-2">Item Title</label>
+                <input type="text" id="itemTitle" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter item title" required>
+            </div>
+    
+            <!-- Item Price -->
+            <div class="mb-4">
+                <label for="itemPrice" class="block text-gray-700 font-semibold mb-2">Price ($)</label>
+                <input type="number" id="itemPrice" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter item price" required>
+            </div>
+    
+            <!-- Store Selection -->
+            <div class="mb-4">
+                <label for="itemStore" class="block text-gray-700 font-semibold mb-2">Store</label>
+                <select id="itemStore" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="">Select store</option>
+                    <option value="Store 1">Store 1</option>
+                    <option value="Store 2">Store 2</option>
+                    <option value="Store 3">Store 3</option>
+                </select>
+            </div>
+    
+            <!-- Item Description -->
+            <div class="mb-4">
+                <label for="itemDescription" class="block text-gray-700 font-semibold mb-2">Description</label>
+                <textarea id="itemDescription" rows="4" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter item description"></textarea>
+            </div>
+    
+            <!-- Item Image Upload -->
+            <div class="mb-6">
+                <label class="block text-gray-700 font-semibold mb-2">Upload Image</label>
+                <div class="flex items-center space-x-4">
+                    <input type="file" id="itemImage" accept="image/*" class="hidden">
+                    <label for="itemImage" class="flex items-center px-4 py-2 bg-blue-500 text-white rounded-md cursor-pointer hover:bg-blue-600">
+                        <i data-feather="upload" class="mr-2"></i> Choose Image
+                    </label>
+                    <div id="imagePreview" class="w-24 h-24 bg-gray-100 rounded-md flex items-center justify-center">
+                        <img src="https://via.placeholder.com/100" alt="Preview" class="w-full h-full object-cover rounded-md hidden">
+                        <span class="text-gray-400">No image selected</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Save Button -->
+            <div class="flex justify-end">
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" onclick="window.location.href='shopping-item-details.html'">
+                    Save Changes
+                </button>
+            </div>
+        </form>
+    </main>
+    
+</body>
+</html>
+
+<script src="common.js"></script>
+<!-- <script src="create-edit-shopping-item.js"></script> -->

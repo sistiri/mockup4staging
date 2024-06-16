@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradies List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+    <!-- Feather icons CDN for scalable vector icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header Section -->
+    <header class="bg-white shadow-md p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold flex items-center">
+            <i data-feather="clipboard" class="w-6 h-6 mr-2 text-blue-500"></i>
+            Tradies
+        </h1>
+        <nav class="hidden md:flex space-x-4">
+            <a href="index.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
+            </a>
+            <a href="projects.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+            </a>
+            <a href="tasks.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+            </a>
+            <a href="tradies.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
+            </a>
+            <a href="shopping-list.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="shopping-cart" class="w-5 h-5 mr-1 text-blue-500"></i>Shopping Lists
+            </a>
+            <a href="profile.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>Profile
+            </a>
+        </nav>
+        <button id="menu-toggle" class="md:hidden text-gray-600 hover:text-blue-500 focus:outline-none">
+            <i data-feather="menu" class="w-6 h-6 text-blue-500"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden bg-white shadow-md p-4">
+        <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
+        </a>
+        <a href="projects.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+        </a>
+        <a href="tasks.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+        </a>
+        <a href="tradies.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
+        </a>
+        <a href="shopping-list.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="shopping-cart" class="w-5 h-5 mr-1 text-blue-500"></i>Shopping Lists
+        </a>
+        <a href="profile.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>Profile
+        </a>
+    </nav>
+
+<!-- Main Content Section -->
+<main class="p-2 sm:p-4 bg-gray-100">
+
+        <!-- Tabs for Project Filtering -->
+        <div class="mb-4">
+            <ul class="flex space-x-4 border-b border-gray-300 pb-2">
+                <!-- Add tabs dynamically based on projects -->
+                <li class="mr-4">
+                    <button class="tab-btn active">All Tradies</button>
+                </li>
+                <li class="mr-4">
+                    <button class="tab-btn">Project 1</button>
+                </li>
+                <li class="mr-4">
+                    <button class="tab-btn">Project 2</button>
+                </li>
+                <!-- Add more tabs dynamically -->
+            </ul>
+        </div>
+
+<!-- Add New Tradie Button -->
+<div class="flex justify-end mb-4">
+    <button onclick="toggleAddTradieSection()" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">
+        Add New Tradie
+    </button>
+</div>
+
+<!-- Add New Tradie Section (Initially Hidden) -->
+<div id="addTradieSection" class="bg-white p-4 rounded-md shadow-md mb-4 hidden">
+    <h2 class="text-xl font-bold mb-4">Add New Tradie</h2>
+    <div class="flex flex-col gap-4">
+        <input type="text" placeholder="Name" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <input type="text" placeholder="Mobile" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <input type="email" placeholder="Email" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <input type="text" placeholder="Tradesmanship" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <input type="text" placeholder="Location" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <div class="flex justify-end">
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Save</button>
+        </div>
+    </div>
+</div>
+
+<script>
+
+</script>
+
+
+    <!-- Tradie List -->
+    <div id="tradieList" class="space-y-4">
+      <!-- Tradie Item Example -->
+<div class="bg-white flex items-center shadow-md rounded-md overflow-hidden">
+    <!-- Thumbnail and Details -->
+    <div class="flex items-center flex-1 p-4">
+        <img src="https://via.placeholder.com/60" alt="Tradie Thumbnail" class="w-16 h-16 rounded-full object-cover mr-4">
+        <div>
+            <h3 class="text-lg font-semibold">John Doe</h3>
+            <p class="text-gray-500">Plumber</p>
+            <p class="text-gray-500">New York, NY</p>
+            <div class="flex space-x-2 mt-2">
+                <a href="tel:1234567890" class="text-blue-500 hover:text-blue-700" aria-label="Call">
+                    <i data-feather="phone" class="w-5 h-5"></i>
+                </a>
+                <a href="sms:1234567890" class="text-green-500 hover:text-green-700" aria-label="Message">
+                    <i data-feather="message-circle" class="w-5 h-5"></i>
+                </a>
+                <button class="text-yellow-500 hover:text-yellow-700" aria-label="Notes" onclick="toggleNotesPopup('notes-popup-1')">
+                    <i data-feather="file-text" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Link to Details Page -->
+    <a href="tradie-details.html" class="p-4 text-gray-500 hover:text-gray-700" aria-label="Details">
+        <i data-feather="info" class="w-6 h-6"></i>
+    </a>
+</div>
+        <!-- Repeat the Tradie Item for each tradie -->
+        <!-- Placeholder for notes popup -->
+        <div id="notes-popup-1" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50">
+            <div class="bg-white p-6 rounded-md shadow-md w-full max-w-md">
+                <h2 class="text-xl font-bold mb-4">Notes for John Doe</h2>
+                <textarea class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4" rows="4" placeholder="Write your notes here..."></textarea>
+                <div class="flex justify-end">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" onclick="saveNotes('notes-popup-1')">Save</button>
+                    <button class="ml-2 text-gray-600 hover:text-gray-800" onclick="toggleNotesPopup('notes-popup-1')">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+
+</html>
+
+<script src="common.js"></script>
+<script src="tradies.js"></script>
+
+

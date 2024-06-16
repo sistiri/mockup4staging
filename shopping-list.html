@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Lists</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+    <!-- Feather icons CDN for scalable vector icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold flex items-center">
+            <i data-feather="clipboard" class="w-6 h-6 mr-2 text-blue-500"></i>
+            Shopping List
+        </h1>
+        <nav class="hidden md:flex space-x-4">
+            <a href="index.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
+            </a>
+            <a href="projects.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+            </a>
+            <a href="tasks.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+            </a>
+            <a href="tradies.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
+            </a>
+            <a href="shopping-list.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="shopping-cart" class="w-5 h-5 mr-1 text-blue-500"></i>Shopping Lists
+            </a>
+            <a href="profile.html" class="text-gray-600 hover:text-blue-500 flex items-center">
+                <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>Profile
+            </a>
+        </nav>
+        <button id="menu-toggle" class="md:hidden text-gray-600 hover:text-blue-500 focus:outline-none">
+            <i data-feather="menu" class="w-6 h-6 text-blue-500"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden bg-white shadow-md p-4">
+        <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
+        </a>
+        <a href="projects.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+        </a>
+        <a href="tasks.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+        </a>
+        <a href="tradies.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
+        </a>
+        <a href="shopping-list.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="shopping-cart" class="w-5 h-5 mr-1 text-blue-500"></i>Shopping Lists
+        </a>
+        <a href="profile.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>Profile
+        </a>
+    </nav>
+    
+<!-- Main Content Section -->
+<main class="p-2 sm:p-4 bg-gray-100">
+
+<!-- Aggregated Shopping List Buttons -->
+<div class="mb-4 flex overflow-x-auto relative items-end pb-1">
+    <!-- IKEA Button -->
+    <a href="shopping-list.html#ikea" class="store-button bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md flex-shrink-0 text-center mr-2">
+        IKEA
+    </a>
+    <!-- Momax Button -->
+    <a href="shopping-list.html#momax" class="store-button bg-red-500 hover:bg-red-600 px-4 py-2 rounded-md flex-shrink-0 text-center mr-2">
+        Momax
+    </a>
+    <!-- JYSK Button -->
+    <a href="shopping-list.html#jysk" class="store-button bg-yellow-500 hover:bg-yellow-600 px-4 py-2 rounded-md flex-shrink-0 text-center mr-2">
+        JYSK
+    </a>
+    <!-- OBI Button -->
+    <a href="shopping-list.html#obi" class="store-button bg-green-500 hover:bg-green-600 px-4 py-2 rounded-md flex-shrink-0 text-center mr-2">
+        OBI
+    </a>
+    <!-- KIKA Button -->
+    <a href="shopping-list.html#kika" class="store-button bg-pink-500 hover:bg-pink-600 px-4 py-2 rounded-md flex-shrink-0 text-center mr-2">
+        KIKA
+    </a>
+    <!-- Max City Button -->
+    <a href="shopping-list.html#max-city" class="store-button bg-purple-500 hover:bg-purple-600 px-4 py-2 rounded-md flex-shrink-0 text-center mr-2">
+        Max City
+    </a>
+    <!-- XXXL Lutz Button -->
+    <a href="shopping-list.html#xxxl-lutz" class="store-button bg-indigo-500 hover:bg-indigo-600 px-4 py-2 rounded-md flex-shrink-0 text-center mr-2">
+        XXXL Lutz
+    </a>
+
+    <!-- Thin Scroll Line -->
+    <div class="absolute left-0 bottom-0 w-full h-0.5 bg-gray-200 mb-1"></div>
+</div>
+
+
+
+
+
+
+
+    <!-- Tabs for Project Filtering -->
+    <div class="mb-4">
+        <ul class="flex space-x-4 border-b border-gray-300 pb-2">
+            <!-- Tabs for each project, dynamically add more as needed -->
+            <li class="mr-4">
+                <button class="tab-btn active">All Items</button>
+            </li>
+            <li class="mr-4">
+                <button class="tab-btn">Project 1</button>
+            </li>
+            <li class="mr-4">
+                <button class="tab-btn">Project 2</button>
+            </li>
+        </ul>
+    </div>
+
+<!-- New Shopping Item Card -->
+<div class="new-shopping-item bg-white rounded-lg shadow-md p-4 mb-6 relative">
+    <h3 class="text-xl font-semibold mb-4">Add New Shopping Item</h3>
+
+    <!-- Upload Dropdown Button -->
+    <div class="absolute top-4 right-4 z-50"> <!-- Set a high z-index for the dropdown parent -->
+        <button id="uploadBtn" class="flex items-center space-x-2 bg-gray-100 text-gray-700 rounded-full p-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <i data-feather="upload-cloud" class="w-5 h-5"></i>
+            <span class="hidden md:inline">Upload</span>
+        </button>
+        
+        <!-- Upload Dropdown List -->
+        <div id="uploadDropdownList" class="hidden absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-50"> <!-- Apply z-50 for visibility -->
+            <ul class="py-1">
+                <li>
+                    <button class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100" onclick="alert('Add Multiple Items Selected')">
+                        Add Multiple Items
+                    </button>
+                </li>
+                <li>
+                    <button class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100" onclick="alert('Upload Shopping List CSV Selected')">
+                        Upload Shopping List CSV
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Project Selector -->
+    <div class="relative inline-block w-full">
+        <!-- Project Dropdown Button -->
+        <button id="projectDropdownBtn" class="w-full bg-white border border-gray-300 rounded-md shadow-sm px-4 py-2 text-left focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50 transition flex justify-between items-center">
+            <span>Select Project</span>
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button>
+        
+        <!-- Project Dropdown List -->
+        <div id="projectDropdownList" class="hidden absolute left-0 mt-2 w-full bg-white border border-gray-200 rounded-md shadow-lg z-50">
+            <ul class="py-1">
+                <li>
+                    <button class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100" onclick="alert('Project 1 Selected')">
+                        Project 1
+                    </button>
+                </li>
+                <li>
+                    <button class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100" onclick="alert('Project 2 Selected')">
+                        Project 2
+                    </button>
+                </li>
+                <li>
+                    <button class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100" onclick="alert('Project 3 Selected')">
+                        Project 3
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="flex flex-col space-y-3 mt-6">
+        <!-- Item Title -->
+        <input type="text" placeholder="Item Title" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <!-- Item Price -->
+        <input type="text" placeholder="Item Price" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <!-- Item Link -->
+        <input type="text" placeholder="Item Link" class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <!-- Add Photo and Save Button -->
+        <div class="flex space-x-3">
+            <button class="text-blue-500 hover:text-blue-700 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Add Photo">
+                <i data-feather="camera" class="w-6 h-6"></i>
+            </button>
+            <button class="bg-blue-500 text-white rounded-md p-2 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-700 flex-1">Save Item</button>
+        </div>
+    </div>
+</div>
+
+<!-- Shopping List Section -->
+<div id="shopping-list" class="space-y-4">
+
+    <!-- Shopping Item -->
+    <div class="shopping-item flex items-start bg-white rounded-lg shadow-md p-4 mb-4">
+        <!-- Item Image -->
+        <img src="https://via.placeholder.com/100" alt="Item 1" class="w-24 h-24 object-cover rounded-md mr-4">
+        <div class="flex flex-col justify-between w-full">
+            <!-- Item Details and Project Link -->
+            <div>
+                <!-- Item Title -->
+                <h3 class="text-lg font-semibold mb-1">Item 1 Title</h3>
+                <!-- Item Price and Edit Price Link -->
+                <p class="text-gray-600 mb-2">
+                    $50.00 
+                    <a href="#" class="text-blue-500 hover:underline ml-2">Edit Price</a>
+                </p>
+                <!-- Project Title and Link -->
+                <p class="text-gray-500 mb-2">
+                    Project: 
+                    <a href="project-details.html" class="text-blue-500 hover:text-blue-700 font-semibold">Project Title</a>
+                </p>
+                <!-- Store Badge -->
+                <span class="badge bg-yellow-500 text-white px-2 py-1 rounded-full inline-flex items-center">
+                    Store: Example Store
+                </span>
+            </div>
+            <!-- Action Buttons -->
+            <div class="flex items-center space-x-2 mt-2">
+                <!-- Webshop Button -->
+                <a href="#" class="text-blue-500 hover:text-blue-700 flex items-center justify-center" aria-label="Webshop">
+                    <i data-feather="link" class="w-5 h-5"></i>
+                </a>
+                <!-- Edit Button -->
+                <button class="text-yellow-500 hover:text-yellow-700 flex items-center justify-center" aria-label="Edit" onclick="window.location.href='create-edit-shopping-item.html'">
+                    <i data-feather="edit" class="w-5 h-5"></i>
+                </button>
+                <!-- Delete Button -->
+                <button class="text-red-500 hover:text-red-700 flex items-center justify-center" aria-label="Delete">
+                    <i data-feather="trash" class="w-5 h-5"></i>
+                </button>
+                <!-- Comment/Notes Button -->
+                <button class="text-gray-500 hover:text-gray-700 flex items-center justify-center" aria-label="Notes">
+                    <i data-feather="message-circle" class="w-5 h-5"></i>
+                </button>
+                <!-- Related Project Button -->
+                <a href="project-details.html" class="text-purple-500 hover:text-purple-700 flex items-center justify-center" aria-label="Project">
+                    <i data-feather="briefcase" class="w-5 h-5"></i>
+                </a>
+                <!-- Checkmark Button -->
+                <button class="text-green-500 hover:text-green-700 flex items-center justify-center" aria-label="Bought">
+                    <i data-feather="check-circle" class="w-5 h-5"></i>
+                </button>
+                <!-- Info Button -->
+                <button class="text-blue-500 hover:text-blue-700 flex items-center justify-center" aria-label="Info" onclick="window.location.href='shopping-item-details.html'">
+                    <i data-feather="info" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Shopping Item 2 -->
+    <div class="shopping-item flex items-start bg-white rounded-lg shadow-md p-4">
+        <img src="https://via.placeholder.com/100" alt="Item 2" class="w-24 h-24 object-cover rounded-md mr-4">
+        <div class="flex flex-col justify-between w-full">
+            <div>
+                <h3 class="text-lg font-semibold mb-1">Item 2 Title</h3>
+                <p class="text-gray-600 mb-2">
+                    $75.00 
+                    <a href="#" class="text-blue-500 hover:underline ml-2">Edit Price</a>
+                </p>
+            </div>
+            <div class="flex items-center space-x-2 mt-2">
+                <a href="#" class="text-blue-500 hover:text-blue-700 flex items-center justify-center" aria-label="Webshop">
+                    <i data-feather="link" class="w-5 h-5"></i>
+                </a>
+                <button class="text-yellow-500 hover:text-yellow-700 flex items-center justify-center" aria-label="Edit">
+                    <i data-feather="edit" class="w-5 h-5"></i>
+                </button>
+                <button class="text-red-500 hover:text-red-700 flex items-center justify-center" aria-label="Delete">
+                    <i data-feather="trash" class="w-5 h-5"></i>
+                </button>
+                <button class="text-gray-500 hover:text-gray-700 flex items-center justify-center" aria-label="Notes">
+                    <i data-feather="message-circle" class="w-5 h-5"></i>
+                </button>
+                <a href="project2.html" class="text-purple-500 hover:text-purple-700 flex items-center justify-center" aria-label="Project">
+                    <i data-feather="briefcase" class="w-5 h-5"></i>
+                </a>
+                <button class="text-green-500 hover:text-green-700 flex items-center justify-center" aria-label="Bought">
+                    <i data-feather="check-circle" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Item 3 -->
+    <div class="shopping-item flex items-start bg-white rounded-lg shadow-md p-4">
+        <img src="https://via.placeholder.com/100" alt="Item 3" class="w-24 h-24 object-cover rounded-md mr-4">
+        <div class="flex flex-col justify-between w-full">
+            <div>
+                <h3 class="text-lg font-semibold mb-1">Item 3 Title</h3>
+                <p class="text-gray-600 mb-2">
+                    $120.00 
+                    <a href="#" class="text-blue-500 hover:underline ml-2">Edit Price</a>
+                </p>
+            </div>
+            <div class="flex items-center space-x-2 mt-2">
+                <a href="#" class="text-blue-500 hover:text-blue-700 flex items-center justify-center" aria-label="Webshop">
+                    <i data-feather="link" class="w-5 h-5"></i>
+                </a>
+                <button class="text-yellow-500 hover:text-yellow-700 flex items-center justify-center" aria-label="Edit">
+                    <i data-feather="edit" class="w-5 h-5"></i>
+                </button>
+                <button class="text-red-500 hover:text-red-700 flex items-center justify-center" aria-label="Delete">
+                    <i data-feather="trash" class="w-5 h-5"></i>
+                </button>
+                <button class="text-gray-500 hover:text-gray-700 flex items-center justify-center" aria-label="Notes">
+                    <i data-feather="message-circle" class="w-5 h-5"></i>
+                </button>
+                <a href="project3.html" class="text-purple-500 hover:text-purple-700 flex items-center justify-center" aria-label="Project">
+                    <i data-feather="briefcase" class="w-5 h-5"></i>
+                </a>
+                <button class="text-green-500 hover:text-green-700 flex items-center justify-center" aria-label="Bought">
+                    <i data-feather="check-circle" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>
+
+</body>
+</html>
+
+<script src="common.js"></script>
+<script src="shopping-list.js"></script>
+

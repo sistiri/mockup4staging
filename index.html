@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Staging App - Dashboard</title>
+    <title>Mockup4Staging - Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+    <link rel="stylesheet" href="styles.css">
     <!-- Feather icons CDN for scalable vector icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
+
 <body class="bg-gray-100">
     <!-- Header Section -->
     <header class="bg-white shadow-md p-2 flex justify-between items-center">
@@ -64,20 +66,202 @@
     </nav>
     
     <!-- Main Content Section -->
-    <main class="p-4">
-        <h2 class="text-2xl font-semibold">Welcome to Your Dashboard</h2>
-        <p class="mt-4 text-gray-700">Overview of your home staging projects and tasks.</p>
+    <main class="p-2 sm:p-4 bg-gray-100">
+        <!-- Overview Section -->
+        <section class="overview grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <h2 class="text-lg font-semibold">Total Projects</h2>
+                <p class="text-2xl font-bold">12</p>
+                <a href="projects.html" class="text-blue-500 hover:underline">Manage Projects</a>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <h2 class="text-lg font-semibold">Tasks Overview</h2>
+                <p class="text-2xl font-bold">25 Pending</p>
+                <p class="text-2xl font-bold">10 In Progress</p>
+                <p class="text-2xl font-bold">5 Completed</p>
+                <a href="tasks.html" class="text-blue-500 hover:underline">View Tasks</a>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <h2 class="text-lg font-semibold">Upcoming Deadlines</h2>
+                <ul class="list-disc pl-5">
+                    <li>Project 1 - 2024-06-20</li>
+                    <li>Task 3 - 2024-06-22</li>
+                </ul>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <h2 class="text-lg font-semibold">Notifications</h2>
+                <ul class="list-disc pl-5">
+                    <li>3 new messages</li>
+                    <li>2 upcoming deadlines</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects Summary -->
+        <section class="projects-summary mb-6">
+            <h2 class="text-xl font-semibold mb-4">Highlighted Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project Card 1 -->
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col">
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/100" alt="Project Thumbnail" class="rounded-lg w-24 h-24 object-cover">
+                        <div class="ml-4 flex-1">
+                            <h3 class="text-xl font-semibold">Project Title 1</h3>
+                            <div class="text-gray-600 text-sm mt-2">
+                                <p><strong>Start:</strong> 2023-06-01</p>
+                                <p><strong>End:</strong> 2023-06-30</p>
+                            </div>
+                        </div>
+                        <a href="project-details.html" class="text-gray-500 hover:text-gray-700">
+                            <i data-feather="info" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="text-md font-medium mb-2">Top 3 Tasks:</h4>
+                        <ul class="list-disc list-inside">
+                            <li class="text-gray-700">
+                                <a href="task-details.html" class="hover:text-blue-500">Task 1 - Description</a>
+                            </li>
+                            <li class="text-gray-700">
+                                <a href="task-details.html" class="hover:text-blue-500">Task 2 - Description</a>
+                            </li>
+                            <li class="text-gray-700">
+                                <a href="task-details.html" class="hover:text-blue-500">Task 3 - Description</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bottom-section mt-4 flex justify-between items-center">
+                        <div class="flex space-x-2">
+                            <span class="badge">
+                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 1a7 7 0 100 14 7 7 0 000-14zM2.5 10a7.5 7.5 0 1115 0 7.5 7.5 0 01-15 0zM8 7a2 2 0 104 0 2 2 0 00-4 0z" clip-rule="evenodd" />
+                                </svg>
+                                3
+                            </span>
+                            <span class="badge">
+                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v4H3.5A1.5 1.5 0 002 11.5v5A1.5 1.5 0 003.5 18h13A1.5 1.5 0 0018 16.5v-5A1.5 1.5 0 0016.5 10H14V6a4 4 0 00-4-4zM9 6v5H8V6a2 2 0 114 0v5h-1V6a1 1 0 10-2 0zm5 5h2.5a.5.5 0 01.5.5v5a.5.5 0 01-.5.5h-13a.5.5 0 01-.5-.5v-5a.5.5 0 01.5-.5H6V6a4 4 0 118 0v5z" clip-rule="evenodd" />
+                                </svg>
+                                2
+                            </span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="text-gray-500 hover:text-gray-700" aria-label="Add Note" onclick="showAddNotePopup()">
+                                <i data-feather="edit-3" class="w-6 h-6"></i>
+                            </button>
+                            <a href="tasks.html" class="text-blue-500 hover:text-blue-700" aria-label="Tasks">
+                                <i data-feather="clipboard" class="w-6 h-6"></i>
+                            </a>
+                            <a href="shopping-list.html" class="text-green-500 hover:text-green-700" aria-label="Shopping List">
+                                <i data-feather="shopping-cart" class="w-6 h-6"></i>
+                            </a>
+                            <a href="tradies.html" class="text-purple-500 hover:text-purple-700" aria-label="Tradies">
+                                <i data-feather="tool" class="w-6 h-6"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Project Cards can be added here in a similar structure -->
+            </div>
+        </section>
+
+        <!-- Tasks Summary -->
+        <section class="tasks-summary mb-6">
+            <h2 class="text-xl font-semibold mb-4">Tasks Overview</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Example Task Card -->
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <h3 class="text-lg font-semibold">Pending Tasks</h3>
+                    <ul class="list-disc pl-5">
+                        <li><a href="task-details.html" class="hover:text-blue-500">Task 1</a></li>
+                        <li><a href="task-details.html" class="hover:text-blue-500">Task 2</a></li>
+                        <li><a href="task-details.html" class="hover:text-blue-500">Task 3</a></li>
+                    </ul>
+                </div>
+                <!-- Additional Task Cards can be added here in a similar structure -->
+            </div>
+        </section>
+
+        <!-- Shopping List Overview -->
+        <section class="shopping-list-summary mb-6">
+            <h2 class="text-xl font-semibold mb-4">Shopping List</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Example Shopping Item -->
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <h3 class="text-lg font-semibold">Recent Items</h3>
+                    <ul class="list-disc pl-5">
+                        <li><a href="shopping-item-details.html" class="hover:text-blue-500">Item 1</a></li>
+                        <li><a href="shopping-item-details.html" class="hover:text-blue-500">Item 2</a></li>
+                        <li><a href="shopping-item-details.html" class="hover:text-blue-500">Item 3</a></li>
+                    </ul>
+                </div>
+                <!-- Additional Shopping Item Cards can be added here in a similar structure -->
+            </div>
+        </section>
+
+        <!-- Tradies Overview -->
+        <section class="tradies-summary mb-6">
+            <h2 class="text-xl font-semibold mb-4">Tradies</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Example Tradie Card -->
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <h3 class="text-lg font-semibold">Available Tradies</h3>
+                    <ul class="list-disc pl-5">
+                        <li><a href="tradie-details.html" class="hover:text-blue-500">Tradie 1</a></li>
+                        <li><a href="tradie-details.html" class="hover:text-blue-500">Tradie 2</a></li>
+                        <li><a href="tradie-details.html" class="hover:text-blue-500">Tradie 3</a></li>
+                    </ul>
+                </div>
+                <!-- Additional Tradie Cards can be added here in a similar structure -->
+            </div>
+        </section>
+
+        <!-- Recent Activity Log -->
+        <section class="activity-log mb-6">
+            <h2 class="text-xl font-semibold mb-4">Recent Activity</h2>
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <ul class="list-disc pl-5">
+                    <li>Task "Task 1" was completed by User X.</li>
+                    <li>Project "Project 1" was updated.</li>
+                    <li>New item "Item 3" was added to the shopping list.</li>
+                </ul>
+            </div>
+        </section>
+
+         <!-- Change Log Section -->
+         <section>
+            <h2 class="text-xl font-semibold mb-4">Change Log</h2>
+            <div class="divide-y divide-gray-200">
+                <div class="flex justify-between py-1">
+                    <p class="text-gray-500 flex-grow">Task created, Project 1</p>
+                    <p class="text-sm text-gray-400">2024-06-15 10:30</p>
+                </div>
+                <div class="flex justify-between py-1">
+                    <p class="text-gray-500 flex-grow">Photo added, Project 2</p>
+                    <p class="text-sm text-gray-400">2024-06-14 15:45</p>
+                </div>
+                <div class="flex justify-between py-1">
+                    <p class="text-gray-500 flex-grow">Called Tradie 1</p>
+                    <p class="text-sm text-gray-400">2024-06-13 11:20</p>
+                </div>
+                <!-- Repeat for each activity log entry -->
+            </div>
+        </section>
     </main>
 </body>
-</html>
 
-<!-- JavaScript to toggle the mobile menu -->
-<script>
-    document.getElementById('menu-toggle').addEventListener('click', function () {
-        var menu = document.getElementById('mobile-menu');
-        menu.classList.toggle('hidden');
-    });
+<!-- Add Note Modal -->
+<div id="addNoteModal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
+    <div class="bg-white rounded-lg p-6 w-96 shadow-lg">
+        <h3 class="text-lg font-semibold mb-4">Add Note</h3>
+        <textarea class="w-full p-2 border rounded-md mb-4" rows="4" placeholder="Write your note..."></textarea>
+        <div class="flex justify-end space-x-2">
+            <button class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-400" onclick="hideAddNotePopup()">Cancel</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Add Note</button>
+        </div>
+    </div>
+</div>
 
-    // Replace placeholder icons with Feather icons
-    feather.replace();
-</script>
+<script src="common.js"></script>
+<script src="index.js"></script>

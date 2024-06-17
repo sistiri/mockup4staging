@@ -14,7 +14,7 @@
     <!-- Header Section -->
     <header class="bg-white shadow-md p-4 flex justify-between items-center">
         <h1 class="text-2xl font-bold flex items-center">
-            <i data-feather="clipboard" class="w-6 h-6 mr-2 text-blue-500"></i>
+            <i data-feather="tool" class="w-6 h-6 mr-2 text-blue-500"></i>
             Tradie details
         </h1>
         <nav class="hidden md:flex space-x-4">
@@ -22,10 +22,10 @@
                 <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
             </a>
             <a href="projects.html" class="text-gray-600 hover:text-blue-500 flex items-center">
-                <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+                <i data-feather="layers" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
             </a>
             <a href="tasks.html" class="text-gray-600 hover:text-blue-500 flex items-center">
-                <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+                <i data-feather="check-square" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
             </a>
             <a href="tradies.html" class="text-gray-600 hover:text-blue-500 flex items-center">
                 <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
@@ -48,10 +48,10 @@
             <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
         </a>
         <a href="projects.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
-            <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+            <i data-feather="layers" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
         </a>
         <a href="tasks.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
-            <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+            <i data-feather="check-square" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
         </a>
         <a href="tradies.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
             <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
@@ -59,40 +59,124 @@
         <a href="shopping-list.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
             <i data-feather="shopping-cart" class="w-5 h-5 mr-1 text-blue-500"></i>Shopping Lists
         </a>
+        <a href="members.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="users" class="w-5 h-5 mr-1 text-blue-500"></i>Team members
+        </a>
         <a href="profile.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
-            <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>Profile
+            <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>My Profile
         </a>
     </nav>
     
     <!-- Main Content Section -->
-    <main class="p-4 bg-gray-100">
+    <main class="p-2 bg-gray-100 min-h-screen">
 
-    <!-- Contact Details Section -->
-    <div class="bg-white p-6 rounded-md shadow-md mb-6">
-        <div class="flex items-center">
-            <img src="https://via.placeholder.com/100" alt="Tradie Thumbnail" class="w-24 h-24 rounded-full object-cover mr-4">
-            <div>
-                <h1 class="text-2xl font-bold mb-2">John Doe</h1>
-                <p class="text-gray-600">Plumber</p>
-                <p class="text-gray-600">New York, NY</p>
+        <!-- Contact Details Section -->
+        <div class="bg-white p-6 rounded-md shadow-md mb-6">
+            <div class="flex items-center">
+                <img src="https://via.placeholder.com/100" alt="Tradie Thumbnail" class="w-24 h-24 rounded-full object-cover mr-4">
+                <div>
+                    <h1 class="text-2xl font-bold mb-2">John Doe</h1>
+                    <p class="text-gray-600">Plumber</p>
+                    <p class="text-gray-600">New York, NY</p>
+                </div>
+            </div>
+            <div class="mt-4 space-y-2">
+                <div class="flex items-center space-x-2">
+                    <i data-feather="phone" class="text-blue-500 w-5 h-5"></i>
+                    <a href="tel:1234567890" class="text-blue-500 hover:text-blue-700">123-456-7890</a>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i data-feather="message-circle" class="text-green-500 w-5 h-5"></i>
+                    <a href="sms:1234567890" class="text-green-500 hover:text-green-700">Send Text</a>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i data-feather="mail" class="text-red-500 w-5 h-5"></i>
+                    <a href="mailto:john.doe@example.com" class="text-red-500 hover:text-red-700">john.doe@example.com</a>
+                </div>
             </div>
         </div>
-        <div class="mt-4 space-y-2">
-            <div class="flex items-center space-x-2">
-                <i data-feather="phone" class="text-blue-500 w-5 h-5"></i>
-                <a href="tel:1234567890" class="text-blue-500 hover:text-blue-700">123-456-7890</a>
-            </div>
-            <div class="flex items-center space-x-2">
-                <i data-feather="message-circle" class="text-green-500 w-5 h-5"></i>
-                <a href="sms:1234567890" class="text-green-500 hover:text-green-700">Send Text</a>
-            </div>
-            <div class="flex items-center space-x-2">
-                <i data-feather="mail" class="text-red-500 w-5 h-5"></i>
-                <a href="mailto:john.doe@example.com" class="text-red-500 hover:text-red-700">john.doe@example.com</a>
-            </div>
+
+        <!-- Tabs for Project Filtering -->
+        <div class="mb-4">
+            <ul class="flex space-x-4 border-b border-gray-300 pb-2">
+                <!-- Add tabs dynamically based on projects -->
+                <li class="mr-4">
+                    <button class="tab-btn active">All Jobs</button>
+                </li>
+                <li class="mr-4">
+                    <button class="tab-btn">Project 1</button>
+                </li>
+                <li class="mr-4">
+                    <button class="tab-btn">Project 2</button>
+                </li>
+                <!-- Add more tabs dynamically -->
+            </ul>
         </div>
-    </div>
     
+        <!-- Jobs for Tradie Section -->
+        <div class="flex justify-between items-center mb-4">
+            <h1 class="text-2xl font-bold">Jobs for Tradie</h1>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 flex items-center" onclick="toggleJobPopup()">
+                <i data-feather="plus" class="w-5 h-5 mr-2"></i>Add Job
+            </button>
+        </div>
+    
+        <!-- Jobs List -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+    
+            <!-- Job Card Example -->
+            <div class="job-card bg-white rounded-lg shadow-md p-4 relative">
+                <!-- Edit Button -->
+                <a href="create-edit-job.html" class="absolute top-4 right-4 text-yellow-500 hover:text-yellow-700" aria-label="Edit Job">
+                    <i data-feather="edit-2" class="w-5 h-5"></i>
+                </a>
+                <!-- Project Title -->
+                <h3 class="text-md font-semibold mb-1 text-gray-500">Project Title</h3>
+                <!-- Job Title -->
+                <h2 class="text-xl font-semibold mb-2">Job Title</h2>
+                <!-- Job Description -->
+                <p class="text-gray-700 mb-2">
+                    This is a longer example of a job description that provides more detailed information about the role and responsibilities. It may include specific tasks, expectations, and any other relevant details that give a clear understanding of the job requirements.
+                </p>
+                <!-- Job Dates -->
+                <div class="flex items-center mb-2">
+                    <p class="text-gray-600"><strong>Start:</strong> 2023-06-01</p>
+                    <p class="ml-4 text-gray-600"><strong>End:</strong> 2023-06-30</p>
+                </div>
+                <!-- Estimated Cost -->
+                <p class="text-gray-600 mb-2"><strong>Estimated Cost:</strong> $1000</p>
+                <!-- Dependencies -->
+                <p class="text-gray-600 mb-4"><strong>Dependencies:</strong> Dependency details here</p>
+    
+                <!-- Job Actions -->
+                <div class="flex items-center space-x-2">
+                    <!-- Add Note Button -->
+                    <button class="text-blue-500 hover:text-blue-700 flex items-center justify-center" aria-label="Add Note" onclick="toggleNotePopup()">
+                        <i data-feather="file-text" class="w-5 h-5"></i>
+                    </button>
+                    <!-- Checkmark Icon -->
+                    <button class="text-red-500 hover:text-red-700 flex items-center justify-center" aria-label="Mark as Done" onclick="markAsDone(this)">
+                        <i data-feather="check-circle" class="w-5 h-5"></i>
+                    </button>
+                    <!-- Delete Icon -->
+                    <button class="text-red-500 hover:text-red-700 flex items-center justify-center" aria-label="Delete Job" onclick="deleteJob(this)">
+                        <i data-feather="trash" class="w-5 h-5"></i>
+                    </button>
+                    <!-- Money Icon -->
+                    <button class="text-yellow-500 hover:text-yellow-700 flex items-center justify-center" aria-label="Money Transaction" onclick="toggleMoneyTransactionPopup()">
+                        <i data-feather="dollar-sign" class="w-5 h-5"></i>
+                    </button>
+                </div>
+    
+                <!-- Info Icon moved to bottom right corner -->
+                <a href="job-details.html" class="absolute bottom-4 right-4 text-blue-500 hover:text-blue-700 flex items-center justify-center" aria-label="Job Details">
+                    <i data-feather="info" class="w-5 h-5"></i>
+                </a>
+            </div>
+            <!-- Repeat for each job -->
+    
+        </div>
+        
         <!-- Notes Section -->
         <div class="bg-white p-6 rounded-md shadow-md mb-6">
             <h2 class="text-xl font-bold mb-4">Notes</h2>
@@ -109,7 +193,7 @@
                 </button>
             </div>
         </div>
-    
+
         <!-- Related Projects Section -->
         <div class="bg-white p-6 rounded-md shadow-md">
             <h2 class="text-xl font-bold mb-4">Related Projects</h2>
@@ -133,7 +217,65 @@
                 </button>
             </div>
         </div>
-    
+
+        <!-- Add Job Popup -->
+        <div id="job-popup" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50">
+            <div class="bg-white p-6 rounded-md shadow-md w-full max-w-md">
+                <h2 class="text-xl font-bold mb-4">Add Job</h2>
+
+                <!-- Project Selector -->
+                <label for="project" class="block mb-2 font-medium text-gray-700">Project:</label>
+                <select id="project" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4">
+                    <option value="">Select Project</option>
+                    <option value="project1">Project 1</option>
+                    <option value="project2">Project 2</option>
+                    <!-- Add more options as needed -->
+                </select>
+
+                <!-- Job Description Input -->
+                <label for="job-description" class="block mb-2 font-medium text-gray-700">Job Description:</label>
+                <input id="job-description" type="text" placeholder="Job Description or Role" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4">
+
+                <!-- Start Date Input -->
+                <div class="flex items-center mb-4">
+                    <label for="start-date" class="block font-medium text-gray-700 mr-2">Start:</label>
+                    <input id="start-date" type="date" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <!-- End Date Input -->
+                <div class="flex items-center mb-4">
+                    <label for="end-date" class="block font-medium text-gray-700 mr-2">End:</label>
+                    <input id="end-date" type="date" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <!-- Estimated Cost Input -->
+                <label for="estimated-cost" class="block mb-2 font-medium text-gray-700">Estimated Cost:</label>
+                <input id="estimated-cost" type="text" placeholder="Estimated Cost" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4">
+
+                <!-- Dependency Input -->
+                <label for="dependency" class="block mb-2 font-medium text-gray-700">Dependency:</label>
+                <input id="dependency" type="text" placeholder="Dependency" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4">
+
+                <!-- Action Buttons -->
+                <div class="flex justify-end">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" onclick="saveJob()">Save</button>
+                    <button class="ml-2 text-gray-600 hover:text-gray-800" onclick="toggleJobPopup()">Cancel</button>
+                </div>
+            </div>
+        </div>
+            
+        <!-- Add Note Popup -->
+        <div id="note-popup" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50">
+            <div class="bg-white p-6 rounded-md shadow-md w-full max-w-md">
+                <h2 class="text-xl font-bold mb-4">Add Note</h2>
+                <textarea class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4" rows="5" placeholder="Enter your note here..."></textarea>
+                <div class="flex justify-end">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" onclick="toggleNotePopup()">Save Note</button>
+                    <button class="ml-2 text-gray-600 hover:text-gray-800" onclick="toggleNotePopup()">Cancel</button>
+                </div>
+            </div>
+        </div>
+
         <!-- Add Note Popup -->
         <div id="notes-popup" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50">
             <div class="bg-white p-6 rounded-md shadow-md w-full max-w-md">
@@ -145,21 +287,74 @@
                 </div>
             </div>
         </div>
-    
-        <!-- Add Job Popup -->
-        <div id="job-popup" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50">
-            <div class="bg-white p-6 rounded-md shadow-md w-full max-w-md">
-                <h2 class="text-xl font-bold mb-4">Add Job</h2>
-                <input type="text" placeholder="Project Title" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4">
-                <input type="text" placeholder="Job Description or Role" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4">
-                <input type="date" placeholder="Start Date" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4">
-                <input type="date" placeholder="End Date" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4">
-                <div class="flex justify-end">
-                    <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" onclick="saveJob()">Save</button>
-                    <button class="ml-2 text-gray-600 hover:text-gray-800" onclick="toggleJobPopup()">Cancel</button>
+
+        <!-- Money Transaction Popup -->
+        <div id="money-transaction-popup" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50">
+            <div class="bg-white p-6 rounded-md shadow-md w-full max-w-xl relative">
+                <h2 class="text-2xl font-bold mb-4">Money Transaction Administration</h2>
+                
+                <!-- Close Button -->
+                <button class="absolute top-2 right-2 text-gray-600 hover:text-gray-800" onclick="toggleMoneyTransactionPopup()">
+                    <i data-feather="x" class="w-5 h-5"></i>
+                </button>
+
+                <!-- Add New Transaction -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold mb-2">Add New Transaction</h3>
+                    <form id="transaction-form" class="space-y-4">
+                        <div class="flex flex-col">
+                            <label for="transaction-type" class="text-gray-600 mb-1">Transaction Type</label>
+                            <select id="transaction-type" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="transfer">Bank Transfer</option>
+                                <option value="cash">Cash Payment</option>
+                                <option value="invoice">Invoice Received</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="transaction-amount" class="text-gray-600 mb-1">Amount</label>
+                            <input type="number" id="transaction-amount" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="$0.00">
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="transaction-date" class="text-gray-600 mb-1">Date</label>
+                            <input type="date" id="transaction-date" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="transaction-notes" class="text-gray-600 mb-1">Notes</label>
+                            <textarea id="transaction-notes" rows="3" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Additional details..."></textarea>
+                        </div>
+                        <div class="flex justify-end">
+                            <button type="button" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600" onclick="addTransaction()">Add Transaction</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Transaction Logs -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold mb-2">Transaction Logs</h3>
+                    <div id="transaction-logs" class="max-h-40 overflow-y-auto border-t border-b border-gray-300 divide-y divide-gray-200">
+                        <!-- Example Log Entry -->
+                        <div class="py-2 flex justify-between items-center">
+                            <div>
+                                <p class="text-gray-600">Bank Transfer</p>
+                                <p class="text-gray-500 text-sm">2024-06-14 - $150.00</p>
+                            </div>
+                            <button class="text-red-500 hover:text-red-700" onclick="deleteTransaction('log-id')">
+                                <i data-feather="trash-2" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                        <!-- Additional entries will be added dynamically -->
+                    </div>
+                </div>
+
+                <!-- Total Paid Amount -->
+                <div class="flex justify-between items-center border-t border-gray-300 pt-4">
+                    <h3 class="text-lg font-semibold">Total Paid</h3>
+                    <p id="total-paid-amount" class="text-gray-700 text-xl">$0.00</p>
                 </div>
             </div>
         </div>
+
+            
     
     </main>
     

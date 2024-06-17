@@ -15,7 +15,7 @@
     <!-- Header Section -->
     <header class="bg-white shadow-md p-2 flex justify-between items-center">
         <h1 class="text-2xl font-bold flex items-center">
-            <i data-feather="clipboard" class="w-6 h-6 mr-2 text-blue-500"></i>
+            <i data-feather="users" class="w-6 h-6 mr-2 text-blue-500"></i>
             Member Details
         </h1>
         <nav class="hidden md:flex space-x-4">
@@ -23,10 +23,10 @@
                 <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
             </a>
             <a href="projects.html" class="text-gray-600 hover:text-blue-500 flex items-center">
-                <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+                <i data-feather="layers" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
             </a>
             <a href="tasks.html" class="text-gray-600 hover:text-blue-500 flex items-center">
-                <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+                <i data-feather="check-square" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
             </a>
             <a href="tradies.html" class="text-gray-600 hover:text-blue-500 flex items-center">
                 <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
@@ -49,10 +49,10 @@
             <i data-feather="grid" class="w-5 h-5 mr-1 text-blue-500"></i>Dashboard
         </a>
         <a href="projects.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
-            <i data-feather="briefcase" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
+            <i data-feather="layers" class="w-5 h-5 mr-1 text-blue-500"></i>Projects
         </a>
         <a href="tasks.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
-            <i data-feather="clipboard" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
+            <i data-feather="check-square" class="w-5 h-5 mr-1 text-blue-500"></i>Tasks
         </a>
         <a href="tradies.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
             <i data-feather="tool" class="w-5 h-5 mr-1 text-blue-500"></i>Tradies
@@ -60,34 +60,68 @@
         <a href="shopping-list.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
             <i data-feather="shopping-cart" class="w-5 h-5 mr-1 text-blue-500"></i>Shopping Lists
         </a>
+        <a href="members.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
+            <i data-feather="users" class="w-5 h-5 mr-1 text-blue-500"></i>Team members
+        </a>
         <a href="profile.html" class="block py-2 text-gray-600 hover:text-blue-500 flex items-center">
-            <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>Profile
+            <i data-feather="user" class="w-5 h-5 mr-1 text-blue-500"></i>My Profile
         </a>
     </nav>
 
     <!-- Main Content Section -->
     <main class="container mx-auto p-4">
         <!-- Member Details Section -->
-        <section class="mb-8">
-            <div class="bg-white p-4 rounded-lg shadow-md">
+        <section class="flex items-center mb-6">
+            <!-- Profile Image and Edit Option -->
+            <div class="relative">
+                <img src="https://via.placeholder.com/150" alt="Profile Picture" class="w-32 h-32 rounded-full object-cover border-2 border-gray-300">
+                <button class="absolute bottom-0 right-0 bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600" aria-label="Edit Profile Picture" onclick="document.getElementById('uploadProfileImage').click()">
+                    <i data-feather="camera"></i>
+                </button>
+                <input type="file" id="uploadProfileImage" class="hidden" accept="image/*">
+            </div>
+            <div class="ml-6">
+                <!-- Name and Nickname with Edit Option -->
+                <div class="flex items-center mb-4 justify-between">
+                    <h2 class="text-2xl font-semibold">John Doe</h2>
+                    <button class="text-blue-500 hover:text-blue-700" aria-label="Edit Profile" onclick="editProfileField()">
+                        <i data-feather="edit-2" class="w-5 h-5 mr-4"></i>
+                    </button>
+                </div>
+            
+                <!-- Nickname -->
                 <div class="flex items-center mb-4">
-                    <img src="https://via.placeholder.com/150" alt="Profile Picture" class="w-20 h-20 rounded-full object-cover">
-                    <div class="ml-4">
-                        <h2 class="text-2xl font-semibold">John Doe</h2>
-                        <p class="text-gray-500">Nickname: Johnny</p>
-                        <p class="text-gray-500">Email: john.doe@example.com</p>
-                        <p class="text-gray-500">Mobile: +1234567890</p>
-                        <div class="flex mt-2">
-                            <a href="tel:+1234567890" class="text-blue-500 hover:text-blue-700 mr-4" aria-label="Call">
-                                <i data-feather="phone" class="w-5 h-5"></i>
-                            </a>
-                            <a href="sms:+1234567890" class="text-green-500 hover:text-green-700" aria-label="Message">
-                                <i data-feather="message-circle" class="w-5 h-5"></i>
-                            </a>
-                        </div>
-                    </div>
+                    <i data-feather="smile" class="text-gray-600 w-5 h-5 mr-4"></i>
+                    <p class="text-gray-600">Johnny</p>
+                </div>
+            
+                <!-- Mobile with Icon and Edit Option -->
+                <div class="flex items-center mb-4">
+                    <a href="tel:+1234567890" class="text-blue-500 hover:text-blue-700" aria-label="Call">
+                        <i data-feather="phone" class="w-5 h-5 mr-4"></i>
+                    </a>
+                    <a href="sms:+1234567890" class="text-green-500 hover:text-green-700" aria-label="Message">
+                        <i data-feather="message-circle" class="w-5 h-5 mr-4"></i>
+                    </a>
+                    <p class="text-gray-600">+1 234 567 890</p>
+                </div>
+            
+                <!-- Email with Icon and Edit Option -->
+                <div class="flex items-center mb-4">
+                    <a href="mailto:john.doe@example.com" class="text-blue-500 hover:text-blue-700" aria-label="Email">
+                        <i data-feather="mail" class="w-5 h-5 mr-4"></i>
+                    </a>
+                    <p class="text-gray-600">john.doe@example.com</p>
+                </div>
+            
+                <!-- My Tasks Button -->
+                <div class="flex items-center">
+                    <a href="tasks.html#mytasks" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" aria-label="My Tasks">
+                        Add New Task
+                    </a>
                 </div>
             </div>
+            
         </section>
 
         <!-- Assigned Tasks Section -->
